@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1.csproj", "{B7A9D8CE-8965-4F7E-870B-9F9EAFA92EF4}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_JumpingCat", "..\Setup_JumpingCat\Setup_JumpingCat.vdproj", "{DF5C82A6-3551-40B6-AE7B-50F5D86314ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{B7A9D8CE-8965-4F7E-870B-9F9EAFA92EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A9D8CE-8965-4F7E-870B-9F9EAFA92EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A9D8CE-8965-4F7E-870B-9F9EAFA92EF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5C82A6-3551-40B6-AE7B-50F5D86314ED}.Debug|Any CPU.ActiveCfg = Debug
+		{DF5C82A6-3551-40B6-AE7B-50F5D86314ED}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
