@@ -153,6 +153,7 @@ namespace WindowsFormsApp1
             labelLose.Visible = false;
             timerGround.Enabled = true;
             finalScore.Visible = false;
+
         }
 
         private void restartButton_Click(object sender, EventArgs e)
