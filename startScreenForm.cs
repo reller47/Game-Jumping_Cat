@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
 
         private void label_MouseEnter(object sender, EventArgs e)
         {
-            label.Text = "   START   ";
+            label.Text = "     START    ";
             label.BackColor = Color.Maroon;
             label.ForeColor = Color.White;
         }

@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startScreenForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.PictureBox();
             this.timerBgStart = new System.Windows.Forms.Timer(this.components);
             this.label = new System.Windows.Forms.Label();
             this.timerSound = new System.Windows.Forms.Timer(this.components);
             this.backgroundStart2 = new System.Windows.Forms.PictureBox();
             this.backgroundStart = new System.Windows.Forms.PictureBox();
-            this.closeButton = new System.Windows.Forms.PictureBox();
             this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +70,21 @@
             this.panelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseDown);
             this.panelControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseMove);
             // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.close;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.ErrorImage = null;
+            this.closeButton.InitialImage = null;
+            this.closeButton.Location = new System.Drawing.Point(721, 3);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(25, 25);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closeButton.TabIndex = 0;
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // timerBgStart
             // 
             this.timerBgStart.Enabled = true;
@@ -84,11 +99,11 @@
             this.label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label.Font = new System.Drawing.Font("Pristina", 44.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Times New Roman", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(230, 335);
+            this.label.Location = new System.Drawing.Point(194, 355);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(290, 80);
+            this.label.Size = new System.Drawing.Size(362, 70);
             this.label.TabIndex = 4;
             this.label.Text = "Jumping Cat";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,21 +137,6 @@
             this.backgroundStart.TabIndex = 2;
             this.backgroundStart.TabStop = false;
             // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.close;
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.ErrorImage = null;
-            this.closeButton.InitialImage = null;
-            this.closeButton.Location = new System.Drawing.Point(721, 3);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(25, 25);
-            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closeButton.TabIndex = 0;
-            this.closeButton.TabStop = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // startScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,9 +152,9 @@
             this.Text = "Jumping Cat";
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
