@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
         SoundPlayer gameMusic = new SoundPlayer(Properties.Resources.game_14076);
         SoundPlayer loseSound = new SoundPlayer(Properties.Resources.loseSound);
         bool sound = true;
+        bool soundGameOver = true;
+        bool restartClick = false;
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace WindowsFormsApp1
             finalScore.Visible = false;
             KeyPreview = true;
             gameMusic.Play();
+            soundButton.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -101,11 +104,15 @@ namespace WindowsFormsApp1
             }
             if((player.Bounds.IntersectsWith(bomb.Bounds)) || (player.Bounds.IntersectsWith(bomb2.Bounds)))
             {
+               restartClick = false;
                timerGround.Enabled = false;
                gameMusic.Stop();
                sound = false;
                timerSound.Enabled = false;
-               loseSound.Play();
+               if(soundGameOver == true)
+                {
+                    loseSound.Play();
+                }
                panelLose.Visible = true;
                buttonLose.Visible = true;
                labelLose.Visible = true;
@@ -122,7 +129,6 @@ namespace WindowsFormsApp1
             {
                 player.Top -= speedJump;
                 countJump++;
-               // jumpSound.Play();
             }
         }
 
@@ -138,6 +144,7 @@ namespace WindowsFormsApp1
 
         private void buttonLose_Click(object sender, EventArgs e)
         {
+            restartClick = true;
             scores = 0;
             countScores.Text = ": " + scores.ToString();
             player.Top = 554;
@@ -145,8 +152,11 @@ namespace WindowsFormsApp1
             bomb.Left = 350;
             bomb2.Left = 560;
             coin.Left = 455;
-            sound = true;
-            gameMusic.Play();
+            if(soundOffButton.Visible == true)
+            {
+                sound = true;
+                gameMusic.Play();
+            }
             timerSound.Enabled = true;
             panelLose.Visible = false;
             buttonLose.Visible = false;
@@ -158,6 +168,7 @@ namespace WindowsFormsApp1
 
         private void restartButton_Click(object sender, EventArgs e)
         {
+            restartClick = false;
             gameMusic.Stop();
             sound = false;
             timerSound.Enabled= false;
@@ -168,8 +179,11 @@ namespace WindowsFormsApp1
             bomb.Left = 350;
             bomb2.Left = 560;
             coin.Left = 455;
-            sound = true;
-            gameMusic.Play();
+            if (soundOffButton.Visible == true)
+            {
+                sound = true;
+                gameMusic.Play();
+            }
             timerSound.Enabled = true;
             panelLose.Visible = false;
             buttonLose.Visible = false;
@@ -195,6 +209,29 @@ namespace WindowsFormsApp1
                 gameMusic.Play();
             }
 
+        }
+
+        private void soundOffButton_Click(object sender, EventArgs e)
+        {
+            soundGameOver = false;
+            sound = false;
+            gameMusic.Stop();
+            timerSound.Stop();
+            soundOffButton.Visible = false;
+            soundButton.Visible = true;
+        }
+
+        private void soundButton_Click(object sender, EventArgs e)
+        {
+            soundGameOver = true;
+            sound = true;
+            if (restartClick == true)
+            {
+                gameMusic.Play();
+                timerSound.Start();
+            }
+            soundButton.Visible = false;
+            soundOffButton.Visible = true;
         }
     }
 }

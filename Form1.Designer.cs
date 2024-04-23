@@ -51,6 +51,8 @@
             this.cloudScore = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerSound = new System.Windows.Forms.Timer(this.components);
+            this.soundOffButton = new System.Windows.Forms.PictureBox();
+            this.soundButton = new System.Windows.Forms.PictureBox();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restartButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
@@ -64,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundOffButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundButton)).BeginInit();
             this.SuspendLayout();
             // 
             // timerGround
@@ -75,6 +79,8 @@
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.Cyan;
+            this.panelControl.Controls.Add(this.soundOffButton);
+            this.panelControl.Controls.Add(this.soundButton);
             this.panelControl.Controls.Add(this.label1);
             this.panelControl.Controls.Add(this.restartButton);
             this.panelControl.Controls.Add(this.closeButton);
@@ -295,6 +301,32 @@
             this.timerSound.Interval = 14780;
             this.timerSound.Tick += new System.EventHandler(this.timerSound_Tick);
             // 
+            // soundOffButton
+            // 
+            this.soundOffButton.BackColor = System.Drawing.Color.Transparent;
+            this.soundOffButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.soundOffButton.Image = ((System.Drawing.Image)(resources.GetObject("soundOffButton.Image")));
+            this.soundOffButton.Location = new System.Drawing.Point(565, 3);
+            this.soundOffButton.Name = "soundOffButton";
+            this.soundOffButton.Size = new System.Drawing.Size(24, 24);
+            this.soundOffButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.soundOffButton.TabIndex = 12;
+            this.soundOffButton.TabStop = false;
+            this.soundOffButton.Click += new System.EventHandler(this.soundOffButton_Click);
+            // 
+            // soundButton
+            // 
+            this.soundButton.BackColor = System.Drawing.Color.Transparent;
+            this.soundButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.soundButton.Image = ((System.Drawing.Image)(resources.GetObject("soundButton.Image")));
+            this.soundButton.Location = new System.Drawing.Point(565, 3);
+            this.soundButton.Name = "soundButton";
+            this.soundButton.Size = new System.Drawing.Size(24, 24);
+            this.soundButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.soundButton.TabIndex = 13;
+            this.soundButton.TabStop = false;
+            this.soundButton.Click += new System.EventHandler(this.soundButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +368,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundOffButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,6 +398,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label finalScore;
         private System.Windows.Forms.Timer timerSound;
+        private System.Windows.Forms.PictureBox soundOffButton;
+        private System.Windows.Forms.PictureBox soundButton;
     }
 }
 

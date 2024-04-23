@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             menu.Play();
+            soundButton.Visible = false;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -81,6 +82,22 @@ namespace WindowsFormsApp1
             {
                 menu.Play();
             }
+        }
+
+        private void soundButton_Click(object sender, EventArgs e)
+        {
+            menu.Play();
+            timerSound.Start();
+            soundButton.Visible = false;
+            soundOffButton.Visible = true;
+        }
+
+        private void soundOffButton_Click(object sender, EventArgs e)
+        {
+            menu.Stop();
+            timerSound.Stop();
+            soundOffButton.Visible = false;
+            soundButton.Visible = true;
         }
     }
 }

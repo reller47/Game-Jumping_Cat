@@ -38,10 +38,14 @@
             this.timerSound = new System.Windows.Forms.Timer(this.components);
             this.backgroundStart2 = new System.Windows.Forms.PictureBox();
             this.backgroundStart = new System.Windows.Forms.PictureBox();
+            this.soundButton = new System.Windows.Forms.PictureBox();
+            this.soundOffButton = new System.Windows.Forms.PictureBox();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundOffButton)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +63,8 @@
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.Cyan;
+            this.panelControl.Controls.Add(this.soundOffButton);
+            this.panelControl.Controls.Add(this.soundButton);
             this.panelControl.Controls.Add(this.label1);
             this.panelControl.Controls.Add(this.closeButton);
             this.panelControl.Cursor = System.Windows.Forms.Cursors.NoMove2D;
@@ -137,6 +143,31 @@
             this.backgroundStart.TabIndex = 2;
             this.backgroundStart.TabStop = false;
             // 
+            // soundButton
+            // 
+            this.soundButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.soundButton.Image = ((System.Drawing.Image)(resources.GetObject("soundButton.Image")));
+            this.soundButton.Location = new System.Drawing.Point(565, 3);
+            this.soundButton.Name = "soundButton";
+            this.soundButton.Size = new System.Drawing.Size(24, 24);
+            this.soundButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.soundButton.TabIndex = 5;
+            this.soundButton.TabStop = false;
+            this.soundButton.Click += new System.EventHandler(this.soundButton_Click);
+            // 
+            // soundOffButton
+            // 
+            this.soundOffButton.BackColor = System.Drawing.Color.Transparent;
+            this.soundOffButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.soundOffButton.Image = ((System.Drawing.Image)(resources.GetObject("soundOffButton.Image")));
+            this.soundOffButton.Location = new System.Drawing.Point(565, 3);
+            this.soundOffButton.Name = "soundOffButton";
+            this.soundOffButton.Size = new System.Drawing.Size(24, 24);
+            this.soundOffButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.soundOffButton.TabIndex = 5;
+            this.soundOffButton.TabStop = false;
+            this.soundOffButton.Click += new System.EventHandler(this.soundOffButton_Click);
+            // 
             // startScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +186,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soundOffButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +203,7 @@
         private System.Windows.Forms.Timer timerBgStart;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Timer timerSound;
+        private System.Windows.Forms.PictureBox soundButton;
+        private System.Windows.Forms.PictureBox soundOffButton;
     }
 }
